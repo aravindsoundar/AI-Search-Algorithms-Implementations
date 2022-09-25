@@ -21,7 +21,7 @@ def generate_graph():
     add_neighbours(15, [7, 14, 23])
     add_neighbours(16, [8, 17, 24])
     add_neighbours(17, [16])
-    add_neighbours(18, [10, 19])
+    add_neighbours(18, [10, 19,26])
     add_neighbours(19, [11, 20, 18])
     add_neighbours(20, [19, 28])
     add_neighbours(21, [13, 22])
@@ -29,7 +29,7 @@ def generate_graph():
     add_neighbours(23, [15, 31])
     add_neighbours(24, [16, 25])
     add_neighbours(25, [24, 26])
-    add_neighbours(26, [25, 27])
+    add_neighbours(26, [18,25, 27,38])
     add_neighbours(27, [26, 35])
     add_neighbours(28, [20, 29])
     add_neighbours(29, [28, 30])
@@ -42,13 +42,13 @@ def generate_graph():
     add_neighbours(36, [35, 37])
     add_neighbours(37, [36])
 
-    add_neighbours(38, [46, 39])
+    add_neighbours(38, [26,44,46, 39])
     add_neighbours(39, [38, 47])
     add_neighbours(40, [32, 48])
     add_neighbours(41, [49, 42])
     add_neighbours(42, [41, 50, 43])
     add_neighbours(43, [42, 51, 44])
-    add_neighbours(44, [43, 45])
+    add_neighbours(44, [36,43, 45])
     add_neighbours(45, [44, 46, 53])
     add_neighbours(46, [45, 38])
     add_neighbours(47, [39, 55])
@@ -68,6 +68,7 @@ def generate_graph():
     add_neighbours(61, [53])
     add_neighbours(62, [54, 63])
     add_neighbours(63, [55, 62])
+
 
     return graph_neighbours
 
