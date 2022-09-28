@@ -22,17 +22,17 @@ def generate_graph():
     add_neighbours(16, [8, 17, 24])
     add_neighbours(17, [16])
     add_neighbours(18, [10, 19,26])
-    add_neighbours(19, [11, 20, 18])
+    add_neighbours(19, [11, 20, 18,27])
     add_neighbours(20, [19, 28])
     add_neighbours(21, [13, 22])
     add_neighbours(22, [21])
     add_neighbours(23, [15, 31])
     add_neighbours(24, [16, 25])
     add_neighbours(25, [24, 26])
-    add_neighbours(26, [18,25, 27,38])
-    add_neighbours(27, [26, 35])
+    add_neighbours(26, [18,25, 27])
+    add_neighbours(27, [19,26, 35])
     add_neighbours(28, [20, 29])
-    add_neighbours(29, [28, 30])
+    add_neighbours(29, [28, 30,37])
     add_neighbours(30, [29, 31])
     add_neighbours(31, [30, 23])
     add_neighbours(32, [40, 33])
@@ -40,16 +40,16 @@ def generate_graph():
     add_neighbours(34, [33, 35])
     add_neighbours(35, [27, 34, 36])
     add_neighbours(36, [35, 37])
-    add_neighbours(37, [36])
+    add_neighbours(37, [36,29,45])
 
-    add_neighbours(38, [26,44,46, 39])
+    add_neighbours(38, [46, 39])
     add_neighbours(39, [38, 47])
     add_neighbours(40, [32, 48])
     add_neighbours(41, [49, 42])
     add_neighbours(42, [41, 50, 43])
     add_neighbours(43, [42, 51, 44])
-    add_neighbours(44, [36,43, 45])
-    add_neighbours(45, [44, 46, 53])
+    add_neighbours(44, [43, 45])
+    add_neighbours(45, [37,44, 46, 53])
     add_neighbours(46, [45, 38])
     add_neighbours(47, [39, 55])
     add_neighbours(48, [40, 56])
@@ -69,8 +69,8 @@ def generate_graph():
     add_neighbours(62, [54, 63])
     add_neighbours(63, [55, 62])
 
-
     return graph_neighbours
+
 
 def add_neighbours(node, neighbours):
     new_list = []
@@ -78,4 +78,3 @@ def add_neighbours(node, neighbours):
         if val is not None and not val == '':
             new_list.append(str(val))
     graph_neighbours[str(node)] = new_list
-
